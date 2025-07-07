@@ -1,0 +1,7 @@
+<main>
+  <div class="container">
+    <div *ngFor="let task of tasks; trackBy: trackById">
+        <p>{{ task.taskName }}, {{ task.taskDescription }}, {{ task.id }}</p>
+    </div>
+  </div>
+</main>

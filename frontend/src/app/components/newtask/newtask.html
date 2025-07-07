@@ -1,0 +1,12 @@
+<main>
+  <div class="container-fluid d-flex justify-content-center min-vh-100 align-items-center">
+    <form id="form">
+      <h1 class="text-center mb-4">New Task:</h1>
+      <label for="task">Task:</label><br>
+      <input class="form-control" name="task" type="text" id="task" [(ngModel)]="task.taskName"><br>
+      <label for="description">Description:</label><br>
+      <input class="form-control" name="description" type="text" id="description" [(ngModel)]="task.taskDescription">
+      <button type="submit" (click)="onSubmit()" class="form-control mt-5">Create Task</button>
+    </form>
+  </div>
+</main>

@@ -1,0 +1,13 @@
+nav {
+  opacity: 0.75;
+}
+
+a {
+  color: white;
+
+}
+a:hover {
+  transition: 250ms;
+  padding: 0.5em;
+  border-bottom: 2px solid white;
+}
