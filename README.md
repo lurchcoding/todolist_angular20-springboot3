@@ -7,7 +7,7 @@ So far, the frontend and backend are connected, and the GET and POST methods are
 
 🎨 UI improvements
 
-✅ Remaining CRUD methods (PUT, DELETE)
+✅ Implemeting the remaining CRUD methods (PUT, DELETE)
 
-🔐 Eventually, authentication
+🔐 Authentication - eventually
 
