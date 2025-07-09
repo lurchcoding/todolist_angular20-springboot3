@@ -19,10 +19,10 @@ export class Newtask {
   }
 
 
-  constructor(private taskkService: TaskService) {}
+  constructor(private taskService: TaskService) {}
 
   onSubmit() {
-    this.taskkService.createTask(this.task).subscribe({
+    this.taskService.createTask(this.task).subscribe({
       next: (res) => {
         console.log("Task created!", res);
         // Optionally reset the form
