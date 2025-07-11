@@ -9,20 +9,29 @@ import { CommonModule } from '@angular/common';
   templateUrl: './task.html',
   styleUrl: './task.css',
   standalone: true,
-
-
 })
+
 export class Task implements OnInit {
   tasks: FetchTask[] = [];
 
   constructor(private taskService: TaskService) {}
 
   trackById(index: number, task: FetchTask): number {
-  return task.id;
+    return task.id;
   }
 
+  delete(id: number): void {
+  this.taskService.deleteTask(id).subscribe({
+    next: () => {
+      this.tasks = this.tasks.filter(task => task.id !== id);
+    },
+    error: (err) => {
+      console.error('Failed to delete task', err);
+    }
+  });
+}
+
   ngOnInit(): void {
-    console.log('TaskListComponent initialized');
     this.taskService.getAllTasks().subscribe({
       next: (data) => {
         this.tasks = data;
